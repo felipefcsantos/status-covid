@@ -57,7 +57,7 @@ export default function OpcoesHome({ children, src, alt, path, itens }: Props) {
             if (item.titulo !== '') {
               return (
                 <>
-                  <ListItemButton className={styles.listaItem} sx={{background: 'aliceblue', borderRadius: '10px'}} onClick={() => router.push(item.pathItem)}>
+                  <ListItemButton className={styles.listaItem} sx={{background: 'whitesmoke', borderRadius: '10px'}} onClick={() => router.push(item.pathItem)}>
                     <ListItemIcon>
                       <StarBorder />
                     </ListItemIcon>
