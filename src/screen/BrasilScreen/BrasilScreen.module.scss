@@ -1,0 +1,40 @@
+.data {
+    text-align: center;
+
+    h2 {
+        color: aliceblue;
+    }
+
+    input {
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 2rem;
+        padding: 1rem;
+    }
+
+    button {
+        background: aliceblue;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        padding: 1rem;
+
+        &:hover {
+            background: gray;
+            color: aliceblue;
+        }
+
+        &:active {
+            background: rgb(176, 176, 176);
+        }
+    }
+}
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .titulo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }

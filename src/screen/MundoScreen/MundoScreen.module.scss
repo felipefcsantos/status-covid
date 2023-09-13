@@ -1,0 +1,21 @@
+.container{
+    text-align: center;
+    input{
+        font-size: 1rem;
+        border-radius: 10px;
+        padding: 1rem;
+        text-align: center;
+        width: 18rem;
+    }
+}
+
+.tabela{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.titulo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}

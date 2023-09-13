@@ -1,0 +1,27 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    div{
+        display: flex;
+    }
+    h1{
+        color: white;
+    }
+}
+
+.logo{
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.botao{
+    background: rgb(33, 125, 206);
+    border: none;
+    border-radius: 10px;
+    color: aliceblue;
+    cursor: pointer;
+    font-weight: bold;
+    height: 3rem;
+    padding: 1rem;
+}

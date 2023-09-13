@@ -1,0 +1,26 @@
+.container{
+    text-align: center;
+}
+
+.select{
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.item{
+    align-items: center;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    h1{
+        margin: 0 3rem;
+    }
+}
+
+.titulo{
+    font-size: 1.2rem;
+    font-weight: bold;
+}

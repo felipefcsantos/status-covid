@@ -1,0 +1,37 @@
+.container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.formulario{
+    background-color: aliceblue;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 20rem;
+    label{
+        margin: .5rem 0;
+    }
+    option, input{
+        text-align: center;
+    }
+    input, select{
+        border-radius: 10px;
+        padding: .5rem;
+        font-size: 1rem;
+    }
+    button{
+        background: rgb(33, 125, 206);
+        border: none;
+        border-radius: 10px;
+        color: aliceblue;
+        cursor: pointer;
+        font-weight: bold;
+        height: 3rem;
+        margin-top: 1.5rem;
+        padding: 1rem;
+    }
+}
