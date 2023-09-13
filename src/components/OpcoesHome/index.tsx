@@ -39,7 +39,7 @@ export default function OpcoesHome({ children, src, alt, path, itens }: Props) {
   const router = useRouter()
   return (
     <List >
-      <ListItemButton onClick={handleClick} className={styles.listaContainer}>
+      <ListItemButton onClick={handleClick} sx={{background: 'whitesmoke'}} className={styles.listaContainer}>
         <ListItemIcon>
           <Image
             src={src}
@@ -57,7 +57,7 @@ export default function OpcoesHome({ children, src, alt, path, itens }: Props) {
             if (item.titulo !== '') {
               return (
                 <>
-                  <ListItemButton className={styles.listaItem} onClick={() => router.push(item.pathItem)}>
+                  <ListItemButton className={styles.listaItem} sx={{background: 'aliceblue'}} onClick={() => router.push(item.pathItem)}>
                     <ListItemIcon>
                       <StarBorder />
                     </ListItemIcon>
