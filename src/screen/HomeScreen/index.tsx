@@ -3,7 +3,11 @@ import OpcoesHome from '@/components/OpcoesHome'
 import styles from './HomeScreen.module.scss'
 import Titulo from '@/components/Titulo'
 
+// aqui eu adiciono o que realmente será mostrado na página
+
 export default function HomeScreen() {
+
+  // apenas chamo os componentes necessários passando as props pedidaspara cada um
   return (
     <div className={styles.container}>
       <Titulo>Escolha de onde deseja ver os dados sobre a COVID-19:</Titulo>

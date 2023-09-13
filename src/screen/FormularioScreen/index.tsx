@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import Titulo from '@/components/Titulo'
 import styles from './FormularioScreen.module.scss'
 
+// aqui eu adiciono o que realmente será mostrado na página
+
 export default function FormularioScreen() {
+      // defino os estados iniciais utilizados no componente (os que possuem <> são porque defino os types da interface externa para aquele estado)
     const [estado, setEstado] = useState('')
     const [casos, setCasos] = useState('')
     const [confirmados, setConfirmados] = useState('')
@@ -10,6 +13,7 @@ export default function FormularioScreen() {
     const [recuperados, setRecuperados] = useState('')
     const [data, setData] = useState('')
 
+    // função para criar o JSON e exibir uma mensagem na tela com ele
     function enviar() {
         alert(
             `{data: {
@@ -29,6 +33,7 @@ export default function FormularioScreen() {
             <form className={styles.formulario}>
                 <label>Estado</label>
                 <select required value={estado} onChange={(evento => setEstado(evento.target.value))}>
+                    {/* escolhi fazer a lista na mão para que nesta tela não tenha nenhuma requisição HTTP */}
                     <option value=''>Selecione um estado</option>
                     <option value='AC'>AC</option>
                     <option value='AL'>AL</option>
@@ -68,6 +73,7 @@ export default function FormularioScreen() {
                 <input type='number' required value={recuperados} onChange={(evento => setRecuperados(evento.target.value))} />
                 <label>Data</label>
                 <input type='date' required value={data} onChange={(evento => setData(evento.target.value))} />
+                {/* como o botão é do tipo submit, toda ver que for clicado, verificará se todos os campos obrigatórios foram preenchidos e aí chama a função enviar() */}
                 <button type="submit">Enviar</button>
             </form>
         </div>

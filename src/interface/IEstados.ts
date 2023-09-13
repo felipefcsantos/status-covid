@@ -1,3 +1,4 @@
+// aqui fiz a interface com os types isolada, por ter bastante parametro
 export default interface IEstados {
     uid: Number,
     uf: string,

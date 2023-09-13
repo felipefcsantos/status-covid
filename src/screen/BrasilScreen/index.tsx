@@ -10,13 +10,16 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import styles from './BrasilScreen.module.scss'
 
-
+// aqui eu adiciono o que realmente será mostrado na página
 
 export default function BrasilScreen() {
+  // defino os estados iniciais utilizados no componente (os que possuem <> são porque defino os types da interface externa para aquele estado)
   const [estados, setEstados] = useState<IEstados[]>([])
   const [data, setData] = useState('')
 
+  // o hook useEffect é utilizado para requisições assíncronas. Só sai do Hook quando a requisição termina
   useEffect(() => {
+    // utilizo a condição para que no mesmo hook seja possível criar a tabela com ou sem data selecionada
     if (data !== '') {
       api
         .get(`/brazil/${data.replaceAll('-', '')}`)
@@ -29,6 +32,7 @@ export default function BrasilScreen() {
 
   }, [data])
 
+// crio uma função para zerar a data e a tabela voltar com os ultimos dados
   function limparData() {
     setData('')
   }
@@ -44,6 +48,7 @@ export default function BrasilScreen() {
         </div>
       </div>
       <div className={styles.container}>
+        {/* utilizo a tabela do próprio MateriaUI por facilidade */}
         <TableContainer sx={{ maxWidth: 800 }} component={Paper}>
           <Table aria-label="simple table">
             <TableHead >
@@ -63,6 +68,7 @@ export default function BrasilScreen() {
                   <TableCell component="th" scope="row">
                     {estado.state}
                   </TableCell>
+                  {/* o toLocaleString é para definir o padrão de exibição dos números como 000.000.000  */}
                   <TableCell align="center">{estado.cases.toLocaleString('pt-BR')}</TableCell>
                   <TableCell align="center">{estado.deaths.toLocaleString('pt-BR')}</TableCell>
                   <TableCell align="center">{estado.suspects.toLocaleString('pt-BR')}</TableCell>

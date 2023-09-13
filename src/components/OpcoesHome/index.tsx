@@ -14,6 +14,8 @@ import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
 
+// utilizo a interface para definir os types das props que o componente precisa
+
 interface Props {
   children: React.ReactNode,
   src: string,
@@ -30,15 +32,21 @@ interface Props {
 }
 export default function OpcoesHome({ children, src, alt, path, itens }: Props) {
 
+  // utilizo o hook useState para controlar o estado da opção de abrir e fecha o menu
   const [open, setOpen] = React.useState(false);
 
+  // função para alterar o estado open
   const handleClick = () => {
     setOpen(!open);
   };
 
+  // hook para navegar entre páginas
   const router = useRouter()
+
+  // aqui escolhi a utilização de uma lista suspensa do MaterialUI qu já vem configurada e pronta
   return (
     <List >
+      {/* alguns componentes do MaterilUI aceitam apenas alguns parametros de estilização por CSS inline */}
       <ListItemButton onClick={handleClick} sx={{background: 'whitesmoke', borderRadius: '10px'}} className={styles.listaContainer}>
         <ListItemIcon>
           <Image
@@ -54,6 +62,7 @@ export default function OpcoesHome({ children, src, alt, path, itens }: Props) {
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
           {itens?.map((item) => {
+            // aqui faço uma condição para caso o componente tenha apenas 1 opção na lista
             if (item.titulo !== '') {
               return (
                 <>
