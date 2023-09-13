@@ -30,7 +30,7 @@ interface Props {
 }
 export default function OpcoesHome({ children, src, alt, path, itens }: Props) {
 
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
     setOpen(!open);
