@@ -1,6 +1,6 @@
 .listaContainer{
     align-items: center;
-    background: whitesmoke;
+    background: rgb(245, 245, 245);
     border: 3px solid #000;
     border-radius: 10px;
     height: 10rem;
@@ -20,7 +20,7 @@
 }
 
 .listaItem{
-    background: aliceblue;
+    background: rgb(232, 240, 248);
     border: 3px solid #000;
     border-radius: 10px;
     &:hover{
