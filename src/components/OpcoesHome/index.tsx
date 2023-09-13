@@ -15,11 +15,14 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
 
 interface Props {
-  children: ReactNode,
+  children: React.ReactNode,
   src: string,
   alt: string,
   path: string,
   itens: [{
+    titulo: string,
+    pathItem: string
+  }, {
     titulo: string,
     pathItem: string
   }]
@@ -51,16 +54,20 @@ export default function OpcoesHome({ children, src, alt, path, itens }: Props) {
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
           {itens?.map((item) => {
-            return (
-              <>
-                <ListItemButton className={styles.listaItem} onClick={() => router.push(item.pathItem)}>
-                  <ListItemIcon>
-                    <StarBorder />
-                  </ListItemIcon>
-                  <ListItemText primary={item.titulo} />
-                </ListItemButton>
-              </>
-            )
+            if (item.titulo !== '') {
+              return (
+                <>
+                  <ListItemButton className={styles.listaItem} onClick={() => router.push(item.pathItem)}>
+                    <ListItemIcon>
+                      <StarBorder />
+                    </ListItemIcon>
+                    <ListItemText primary={item?.titulo} />
+                  </ListItemButton>
+                </>
+              )
+            }
+
+
           })}
         </List>
       </Collapse>

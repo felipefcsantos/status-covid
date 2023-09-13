@@ -71,9 +71,9 @@ export default function EstadoScreen() {
                                         <TableCell component="th" scope="row">
                                             {estado.state}
                                         </TableCell>
-                                        <TableCell align="center">{parseInt(estado.cases).toLocaleString('pt-BR')}</TableCell>
-                                        <TableCell align="center">{parseInt(estado.deaths).toLocaleString('pt-BR')}</TableCell>
-                                        <TableCell align="center">{parseInt(estado.suspects).toLocaleString('pt-BR')}</TableCell>
+                                        <TableCell align="center">{estado.cases.toLocaleString('pt-BR')}</TableCell>
+                                        <TableCell align="center">{estado.deaths.toLocaleString('pt-BR')}</TableCell>
+                                        <TableCell align="center">{estado.suspects.toLocaleString('pt-BR')}</TableCell>
                                     </TableRow>
                             </TableBody>
                         </Table>

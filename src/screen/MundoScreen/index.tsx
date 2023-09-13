@@ -41,8 +41,8 @@ export default function MundoScreen() {
                   <TableCell component="th" scope="row">
                     {dados?.country}
                   </TableCell>
-                  <TableCell align="center">{parseInt(dados?.confirmed).toLocaleString('pt-BR')}</TableCell>
-                  <TableCell align="center">{parseInt(dados?.deaths).toLocaleString('pt-BR')}</TableCell>
+                  <TableCell align="center">{dados?.confirmed.toLocaleString('pt-BR')}</TableCell>
+                  <TableCell align="center">{dados?.deaths.toLocaleString('pt-BR')}</TableCell>
                 </TableRow>
               </TableBody>
             </Table>

@@ -1,10 +1,10 @@
 export default interface IEstados {
-    uid: number,
+    uid: Number,
     uf: string,
     state: string,
     cases: Number,
     deaths: Number,
-    suspects:Nnumber,
-    refuses: number,
+    suspects:Number,
+    refuses: Number,
     datetime: string
   }

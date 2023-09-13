@@ -27,6 +27,9 @@ export default function HomeScreen() {
           itens={[{
             titulo: 'Pesquisar por país',
             pathItem: '/mundo'
+          }, {
+            titulo: '',
+            pathItem: ''
           }]}
         >Mundo</OpcoesHome>
       </div>

@@ -13,7 +13,7 @@ import styles from './BrasilScreen.module.scss'
 
 
 export default function BrasilScreen() {
-  const [estados, setEstados] = useState<IEstados[]>([{}])
+  const [estados, setEstados] = useState<IEstados[]>([])
   const [data, setData] = useState('')
 
   useEffect(() => {
@@ -57,15 +57,15 @@ export default function BrasilScreen() {
             <TableBody>
               {estados.map((estado) => (
                 <TableRow
-                  key={estado.uid}
+                  key={estado.uf}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
                   <TableCell component="th" scope="row">
                     {estado.state}
                   </TableCell>
-                  <TableCell align="center">{parseInt(estado.cases).toLocaleString('pt-BR')}</TableCell>
-                  <TableCell align="center">{parseInt(estado.deaths).toLocaleString('pt-BR')}</TableCell>
-                  <TableCell align="center">{parseInt(estado.suspects).toLocaleString('pt-BR')}</TableCell>
+                  <TableCell align="center">{estado.cases.toLocaleString('pt-BR')}</TableCell>
+                  <TableCell align="center">{estado.deaths.toLocaleString('pt-BR')}</TableCell>
+                  <TableCell align="center">{estado.suspects.toLocaleString('pt-BR')}</TableCell>
                 </TableRow>
               )
               )}
